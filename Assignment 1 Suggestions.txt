@@ -1,0 +1,22 @@
+Talk about the tooling the project uses:
+- Google Colab
+- Researchers who developed the code
+- Underlying libraries that are used in the code
+
+Talk about the data its trained on and how that may cause issues:
+- Private info in images may be added to outputs unintentionally
+- Unintentional leaking data
+
+Talk about the model's applications on other data:
+- DeepFakes, maybe...
+
+
+
+
+
+
+
+
+
+bledc@tcd.ie
+Clément Bled
