@@ -13,10 +13,62 @@ Talk about the model's applications on other data:
 
 
 
+Google Colab:
+- Must give access to Google Drive for my particular useage
+- This mounts the drive on the machine I access with Colab
+- Means any mounted drive security and privacy issues are not attached to my Google Drive
+- As Colab notebooks can be shared publicly and executed by anyone, malicious content may be added to a public notebook which, when executed by anyone, steals their data from their Google Drive and sends it anywhere
+- Phishing and data theft become quite plausible for unsuspecting academics and researchers
+- I myself use other researcher's code, which, while I read through it to ensure everything I thought would be there was, could have been randomly run by 
+
+"To get a clear understanding of what an adversary might have access to if they successfully access a victim's Google Drive, here are the permissions one grants when agreeing to mount their Google Drive:
+
+See, edit, create and delete ALL of your Google Drive files
+View the photos, videos, albums in your Google Photos
+Retrieve Mobile client configuration and experimentation
+View Google people information such as profiles and contacts
+See, edit, create and delete any of your Google Drive Documents"
+
+From https://antman1p-30185.medium.com/careful-who-you-colab-with-fa8001f933e7
+
+NGrok may be a viable malicious tool to steal Google Drive data from
+
+
+Training Data:
+- My training data consists of cityscape images at both day and night times
+- As to be expected, people, places and vehicles routinely appear in the images
+- In general, models like mine can easily contain sensitive information, but can be used with the safety of knowing the model may be published, but the training data won't (or shouldn't)
+- But that safety is shattered with Membership Inference Attacks, or MIAs
+- MIAs are attacks that seek to determine what data was used in training using only the trained model itself. It mostly effects models trained on tabular data, but research has shown that GAN based models can be effected.
+- This opens up the possibility of sensitive training data being recoverable from a trained model, which would allow attackers to obtain private and senstive image data. In the case of my project, cityscape images are not imcredibly sensitive, but the underylying model architecture may be used elsewhere on a more senstive dataset (maybe medical image data, people's faces, cars and registration plates, etc.)
+- This makes these AI models are large security risk for personal and senstive training data, which is worsened by the fact AI models are everywhere nowadays
+
+
+
+
+Deepfakes:
+- My models are focused on unpaired image translation, such as Day2Night. But the models are not limited to only Day2Night.
+- Other domains exist, such as Horse2Zebra, but the model may be used for malicious purposes.
+- Today, we have seen the rise of DeepFakes, both of celebrities and regular people.
 
 
 
 
 
-bledc@tcd.ie
-Clément Bled
+
+
+
+
+-	Paragraph 1 & 2: Explain the project and all aspects of it
+
+-	Paragraph 3: Explain how Google Colab is used and its functionality
+-	Paragraph 4 & 5: Explain how Google Colab as a tool is insecure and how it can be used in attacks
+-	Paragraph 6: Explain how other researchers are less likely to use Google Colab, but that this is still a universal security and privacy issue
+
+-	Paragraph 7: Explain how training data is important, what is the data and how it may be sensitive
+-	Paragraph 8 & 9: Explain how MIA can be used to extract sensitive data from the model post-training, and how this can lead to data leaks and malicious attacks by bad actors
+-	Paragraph 10: Explain how this is further complicated by the fact that AI models are everywhere, making the risk and threat of sensitive data being exposed even grater
+
+-   Paragraph 11: Explain what DeepFakes are and how they're used
+-   Paragraph 12 & 13: Explain how the model itelf can be used to make DeepFakes and how that can violate someone's privacy
+
